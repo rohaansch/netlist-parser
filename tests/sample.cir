@@ -1,0 +1,18 @@
+.title sample_circuit
+
+.subckt some_cell_a CPWR OGND OPWR SUB
+XD0 SUB CPWR diode AREA=8.826e-11 perim=4.378e-05
+XD1 SUB OPWR diode AREA=3.341e-10 perim=0.000136
+XM0 CPWR OGND CPWR CPWR pmos L=3.35e-06 W=1.5e-05 M=1
+c_4 OGND 0 14.99f
+c_6 CPWR 0 4.43f
+cc_1 OGND CPWR 12.64f
+.ends some_cell_a
+
+.subckt some_cell_b CPWR OGND OPWR SUB
+XD2 SUB OPWR diode AREA=3.341e-10 perim=0.000136
+XM1 CPWR OGND CPWR CPWR pmos L=3.35e-06 W=1.5e-05 M=1
+XM2 OPWR OGND OPWR OPWR pmos L=3.35e-06 W=1.5e-05 M=1
+c_2 OGND 0 14.99f
+c_3 OPWR 0 18.59f
+.ends some_cell_b

@@ -1,0 +1,8 @@
+* Test line continuation
+.subckt longcell A B C VDD VSS
+XM0 out A VDD VDD pmos W=1u L=0.18u \
++ AD=0.18e-12 AS=0.18e-12
+XM1 out \
++ B \
++ VSS VSS nmos W=0.5u L=0.18u
+.ends longcell

@@ -1,0 +1,14 @@
+* Sample SPICE netlist — netlist-parser test file
+* Format: SPICE (.spi)
+
+.subckt inv_x1 A ZN VDD VSS
+Mp1 ZN A VDD VDD pmos W=500n L=180n
+Mn1 ZN A VSS VSS nmos W=250n L=180n
+c_a A VSS 10f
+.ends inv_x1
+
+.subckt and2_x1 A1 A2 ZN VDD VSS
+Xinv1 net1 A1 VDD VSS inv_x1
+Xinv2 net2 A2 VDD VSS inv_x1
+R1 ZN out 100
+.ends and2_x1

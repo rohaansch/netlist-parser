@@ -1,0 +1,13 @@
+* Sample CDL netlist — netlist-parser test file
+* Format: CDL
+
+.SUBCKT some_cell PWR GND SUB
+XRR0pc SUB SUB SUB opppcres M=1 w=4e-07 l=1.4e-06 pbar=1 s=1
+XDnoxref1 SUB noxref_4 diodenwx AREA=4.4154e-12 perim=8.42e-06
+XDnoxref2 SUB noxref_5 diodenwx AREA=4.38195e-12 perim=8.39e-06
+c_1 noxref_4 0 0.425554f
+c_2 noxref_5 0 0.419305f
+c_4 PWR 0 2.14755f
+c_6 GND 0 2.12288f
+cc_1 PWR GND 0.129039f
+.ENDS

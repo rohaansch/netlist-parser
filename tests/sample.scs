@@ -1,0 +1,17 @@
+// Sample Cadence Spectre netlist — netlist-parser test file
+// Format: Spectre (.scs)
+// Two subcircuits: inv_x1 (inverter) and and2_x1 (2-input AND)
+
+subckt inv_x1 (A ZN VDD VSS)
+Mp1 (ZN A VDD VDD) pmos w=500n l=180n
+Mn1 (ZN A VSS VSS) nmos w=250n l=180n
+c_a (A VSS) capacitor c=10f
+r_out (ZN ZN_int) resistor r=50
+ends inv_x1
+
+subckt and2_x1 (A1 A2 ZN VDD VSS)
+Xinv1 (net1 A1 VDD VSS) inv_x1
+Xinv2 (net2 A2 VDD VSS) inv_x1
+Xnand (ZN net1 net2 VDD VSS) nand2_x1
+c_load (ZN VSS) capacitor c=20f
+ends and2_x1
