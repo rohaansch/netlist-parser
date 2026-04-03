@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eda-netlist-parser"
-version = "0.1.1"
+version = "0.1.2"
 description = "A pure-Python parser for SPICE, Spectre, CDL, and DSPF netlist files — extracts subcircuit, port, device, and parasitic data for EDA automation and library characterization workflows"
 readme = "README.md"
 license = { file = "LICENSE" }
