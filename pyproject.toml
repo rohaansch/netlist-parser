@@ -4,12 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eda-netlist-parser"
-version = "0.1.0"
-description = "Pure-Python parser for SPICE-family netlist files (.spi, .cir, .cdl, .scs, .spf)"
+version = "0.1.1"
+description = "A pure-Python parser for SPICE, Spectre, CDL, and DSPF netlist files — extracts subcircuit, port, device, and parasitic data for EDA automation and library characterization workflows"
 readme = "README.md"
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
+authors = [
+  { name = "Rohan Chadhury", email = "rohaanshahid@gmail.com" }
+]
 requires-python = ">=3.7"
-keywords = ["EDA", "SPICE", "netlist", "CDL", "Spectre", "VLSI", "semiconductor", "simulation"]
+keywords = ["eda", "spice", "netlist", "cdl", "spectre", "dspf", "vlsi", "semiconductor", "simulation", "characterization", "lvs", "parasitic", "parser"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -29,7 +32,7 @@ dependencies = []
 
 [project.optional-dependencies]
 color = ["termcolor>=1.1"]
-dev = ["pytest>=7", "termcolor>=1.1"]
+dev   = ["pytest>=7", "termcolor>=1.1"]
 
 [project.scripts]
 netlist-parser = "netlist_parser.__main__:main"
