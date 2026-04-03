@@ -2,6 +2,10 @@
 
 A pure-Python parser for SPICE-family netlist files: `.spi`, `.cir`, `.cdl`, `.scs`, `.spf`, `.sp`, `.hsp`.
 
+[![CI](https://github.com/rohaansch/netlist-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/rohaansch/netlist-parser/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.7%2B-blue)](https://pypi.org/project/eda-netlist-parser/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 ## Installation
 
 ```bash
@@ -9,6 +13,9 @@ pip install eda-netlist-parser
 # optional colored terminal output:
 pip install eda-netlist-parser[color]
 ```
+
+[![PyPI](https://img.shields.io/pypi/v/eda-sdf-parser)](https://pypi.org/project/eda-netlist-parser/)
+[![Python](https://img.shields.io/pypi/pyversions/eda-sdf-parser)](https://pypi.org/project/eda-netlist-parser/)
 
 ## Quick start
 
@@ -76,4 +83,4 @@ netlist-parser --version
 
 ## License
 
-MIT — 2025 Rohaan Scherpbier
+[MIT](LICENSE)
